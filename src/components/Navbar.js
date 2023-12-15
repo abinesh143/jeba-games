@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="d-flex justify-content-center">
           <img src="/emogi1.webp" className="me-2" width={40} height={40}></img>
           <a className="navbar-brand fs-3 fw-bolder px-2" href="#">
-            Smiley Games
+            Jeba Games
           </a>
         </div>
         <button
@@ -27,7 +27,7 @@ const Navbar = () => {
           id="offcanvasBottom"
           aria-labelledby="offcanvasBottomLabel"
         >
-          <div className="py-4 fw-bold fs-2 text-center">Welcome to Smiley Games</div>
+          <div className="py-4 fw-bold fs-2 text-center">Welcome to Jeba Games</div>
           <div className="d-flex justify-content-center py-4 sticky-bottom bg-white">
             <Link
               type="button"
