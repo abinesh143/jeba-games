@@ -1,3 +1,5 @@
+google.com, pub-7665417580875176, DIRECT, f08c47fec0942fa0
+
 appads.in, 106246, RESELLER
 appads.in, 107606, RESELLER
 indexexchange.com, 194080, RESELLER, 50b1c356f2c5c8fc
