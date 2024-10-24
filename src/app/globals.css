@@ -2,20 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+.zoom-in-out-box {
+  animation: zoom-in-zoom-out 1s ease infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+.btn-dark-moon {
+  background: #141e30;
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); 
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  );
+  color: #fff;
+  border: 3px solid #eee;
+}
