@@ -15,7 +15,7 @@ const TermsAndCondition = () => {
             <div className=" bg-[#4F878F] relative rounded-t-[24px] sm:rounded-t-[32px] px-4 sm:px-8 lg:px-6 xl:px-8">
               <div className="absolute left-[100%] bottom-0 overflow-hidden before:block before:h-full before:rounded-bl-[40px] w-7 h-7  before:shadow-[0_0_0_40px_#4F878F]"></div>
               <div className="sm:text-lg xl:text-xl font-semibold py-4">
-                App Maker Pro AI
+                SJS Software
               </div>
             </div>
           </div>
@@ -37,8 +37,8 @@ const TermsAndCondition = () => {
                   <h2 className="font-semibold my-4">1. Parties</h2>
                   <p>
                     The parties to these Terms of Use are you, and the owner of
-                    this Free App Maker Pro AI.com website business, Free App
-                    Maker Pro AI (“Free App Maker Pro AI”). All references to
+                    this Free SJS Software.com website business, Free App
+                    Maker Pro AI (“Free SJS Software”). All references to
                     “we”, “us”, “our”, this “website” or this “site” shall be
                     construed to mean this website business and Free App Maker
                     Pro AI.
@@ -60,7 +60,7 @@ const TermsAndCondition = () => {
                   <h2 className="font-semibold my-4">3. Use And Restrictions</h2>
                   <p>
                     Subject to your complete and ongoing compliance with these
-                    Terms, Free App Maker Pro AI grants you limited,
+                    Terms, Free SJS Software grants you limited,
                     non-transferable, non-sublicensable, revocable permission to
                     access and use the Service for your personal or commercial
                     use during the Term and at the level of service for which

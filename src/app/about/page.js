@@ -17,7 +17,7 @@ const AboutUs = () => {
             <div className=" bg-[#9FFF9D] relative rounded-t-[24px] sm:rounded-t-[32px] px-4 sm:px-8 lg:px-6 xl:px-8">
               <div className="absolute left-[100%] bottom-0 overflow-hidden before:block before:h-full before:rounded-bl-[40px] w-7 h-7  before:shadow-[0_0_0_40px_#9FFF9D]"></div>
               <div className="sm:text-lg xl:text-xl font-semibold py-4">
-                App Maker Pro AI
+                SJS Software
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@ const AboutUs = () => {
                   <p className="max-lg:pb-12 text-sm sm:text-xl">
                     <span className="font-semibold">
                       Trusted App Maker for 7+ years by 780 hundred thousand
-                      developers. App Maker Pro AI is made to allow everybody is
+                      developers. SJS Software is made to allow everybody is
                       an App owner.
                     </span>
                     Mobile apps are the future that has already reached us. More
@@ -70,7 +70,7 @@ const AboutUs = () => {
             <div className="lg:pr-32 text-xs sm:text-xl mt-8 mb-36 lg:mb-20">
               <ul className="list-disc pl-6">
                 <li>
-                  App Maker Pro AI App builder user interface is native and very
+                  SJS Software App builder user interface is native and very
                   easy to use!
                 </li>
                 <li>
@@ -78,7 +78,7 @@ const AboutUs = () => {
                   reliable!
                 </li>
                 <li>
-                  App Maker Pro AI brings new features and updates for you to
+                  SJS Software brings new features and updates for you to
                   improve your Apps
                 </li>
                 <li>
