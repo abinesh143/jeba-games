@@ -2,53 +2,14 @@
     "blog": [
       {
         "id": 1,
-        "title": "Global Markets Rally Amid Economic Recovery",
+        "title": "QS Stock: QuantumScape Corp (QS) Q3 2024 Earnings Call Highlights - Strategic Milestones and Financial Insights",
         "Category": "Global",
-        "description": "Global stock markets have rallied as economies begin to recover from the pandemic, with investors optimistic about future growth.",
-        "url": "https://www.bbc.com/news/business-12345678",
-        "imageUrl": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-        "publishedAt": "2024-10-23T12:34:56Z",
-        "content": "Stock markets around the world are experiencing a significant rally as investors grow more optimistic..."
-      },
-      {
-        "id": 2,
-        "title": "Global Markets Rally Amid Economic Recovery",
-        "Category": "Global",
-        "description": "Global stock markets have rallied as economies begin to recover from the pandemic, with investors optimistic about future growth.",
-        "url": "https://www.bbc.com/news/business-12345678",
-        "imageUrl": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-        "publishedAt": "2024-10-23T12:34:56Z",
-        "content": "Stock markets around the world are experiencing a significant rally as investors grow more optimistic..."
-      },
-      {
-        "id": 3,
-        "title": "Global Markets Rally Amid Economic Recovery",
-        "Category": "Global",
-        "description": "Global stock markets have rallied as economies begin to recover from the pandemic, with investors optimistic about future growth.",
-        "url": "https://www.bbc.com/news/business-12345678",
-        "imageUrl": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-        "publishedAt": "2024-10-23T12:34:56Z",
-        "content": "Stock markets around the world are experiencing a significant rally as investors grow more optimistic..."
-      },
-      {
-        "id": 4,
-        "title": "Global Markets Rally Amid Economic Recovery",
-        "Category": "Global",
-        "description": "Global stock markets have rallied as economies begin to recover from the pandemic, with investors optimistic about future growth.",
-        "url": "https://www.bbc.com/news/business-12345678",
-        "imageUrl": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-        "publishedAt": "2024-10-23T12:34:56Z",
-        "content": "Stock markets around the world are experiencing a significant rally as investors grow more optimistic..."
-      },
-      {
-        "id": 5,
-        "title": "Global Markets Rally Amid Economic Recovery",
-        "Category": "Global",
-        "description": "Global stock markets have rallied as economies begin to recover from the pandemic, with investors optimistic about future growth.",
-        "url": "https://www.bbc.com/news/business-12345678",
-        "imageUrl": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-        "publishedAt": "2024-10-23T12:34:56Z",
-        "content": "Stock markets around the world are experiencing a significant rally as investors grow more optimistic..."
+        "description": "QuantumScape Corp's Q3 2024 earnings reveal a focus on low-volume QSE-5 prototype production, with capital expenditures of $17.9 million. Despite a GAAP net loss of $119.7 million and adjusted EBITDA loss of $71.6 million, the company continues to advance its development milestones, supported by a strategic partnership with PowerCo.",
+        "url": "",
+        "imageUrl": "/temp/news-1.webp",
+        "theme": "light",
+        "publishedAt": "24 Oct 2024",
+        "content": "QuantumScape Corp (NYSE: QS) reported its Q3 2024 financial results, with capital expenditures of $17.9 million, primarily for equipment related to low-volume QSE-5 prototype production. GAAP operating expenses reached $130.2 million, resulting in a net loss of $119.7 million. Adjusted EBITDA loss stood at $71.6 million, aligning with expectations. The company adjusted its full-year EBITDA loss guidance to $280 million to $300 million, while capital expenditures guidance was reduced to $60 million to $75 million. Ending Q3 with $841 million in liquidity, QuantumScape remains focused on advancing production and maintaining its strategic partnership with PowerCo."
       }
     ]
   }

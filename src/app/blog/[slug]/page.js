@@ -1,20 +1,44 @@
 import Image from "next/image";
 import { blog as blogPost } from "../../../json/blog.json";
+import metaDescription from "../../../app/constant";
+
+export async function generateMetadata({ params }) {
+  const id = (await params).slug;
+  const currentMeta = blogPost[id - 1];
+
+  return {
+    title: currentMeta.title || "Smiley News",
+    description: currentMeta.description || metaDescription,
+    keywords: currentMeta.title.split(" ").splice(0, 5),
+  };
+}
 
 const ChildBlog = async ({ params }) => {
   const blogId = await params;
-  const blog = blogPost [blogId.slug];
-  const relatedblog = blogPost .filter((n) => n.id < 5)
+  const blog = blogPost[blogId.slug - 1];
+  const relatedblog = blogPost.filter((n) => n.id < 5);
+
+  const formatTitle = (text, isSplit) => {
+    const title = text.split(" ");
+    if (title.length === 0) {
+      return "";
+    }
+    if (isSplit) {
+      return title.splice(1, 4);
+    } else {
+      return title[0];
+    }
+  };
 
   return (
-    <div className="sm:bg-[url('/images/meal-bg.png')] bg-top bg-no-repeat sm:pb-10 lg:pb-20 mt-10 lg:mt-20">
+    <div className=" bg-top bg-no-repeat sm:pb-10 lg:pb-20 mt-10 lg:mt-20">
       <div className="flex gap-8">
         <div className="lg:basis-2/3">
           <h2 className="text-2xl sm:text-5xl xl:text-6xl mb-4">
             {blog?.title}
           </h2>
           <p className="text-lg sm:text-2xl xl:text-3xl font-normal">
-            March 21, 2023 - {blog?.Category}
+            {blog.publishedAt} - {blog?.Category}
           </p>
         </div>
       </div>
@@ -23,18 +47,18 @@ const ChildBlog = async ({ params }) => {
           <div className="rounded-[24px] relative">
             <Image
               src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
-              alt={blog?.title || 'blog'}
+              alt={blog?.title || "blog"}
               className="w-full object-cover rounded-[24px] "
               width={250}
               height={250}
             />
             <div className="absolute -bottom-8 sm:-bottom-12 xl:-bottom-[60px] font-semibold text-2xl sm:text-5xl xl:text-6xl">
               <div className="bg-white relative w-1/2 pt-3 rounded-tr-[24px] sm:rounded-tr-[40px]">
-                <span>Healthy</span>
+                <span>{formatTitle(blog?.title, false)}</span>
                 <div className="absolute left-[100%] bottom-0 overflow-hidden before:block before:h-full before:rounded-bl-[40px] before:shadow-[0_0_0_40px_white] w-7 h-7 xl:w-12 xl:h-12"></div>
                 <div className="absolute left-[0%] -top-7 sm:-top-12 overflow-hidden before:block before:h-full before:rounded-bl-[40px] before:shadow-[0_0_0_40px_white] w-7 h-7 sm:w-12 sm:h-12"></div>
               </div>
-              <div>Eating Habits for Busy Moms</div>
+              <div>{formatTitle(blog?.title, true)}</div>
             </div>
           </div>
           <div className="text-sm sm:text-2xl xl:text-3xl font-normal mt-10 sm:mt-24">
@@ -61,7 +85,10 @@ const ChildBlog = async ({ params }) => {
                     width={250}
                     height={250}
                   />
-                  <a href={`/blog/${post.id}`} className="absolute flex justify-center items-center bg-[#F4F4F4] top-0 right-0 rounded-bl-[24px] w-14 h-12">
+                  <a
+                    href={`/blog/${post.id}`}
+                    className="absolute flex justify-center items-center bg-[#F4F4F4] top-0 right-0 rounded-bl-[24px] w-14 h-12"
+                  >
                     <Image
                       src="/svg/arrow-angled.svg"
                       alt="blog"
@@ -78,7 +105,7 @@ const ChildBlog = async ({ params }) => {
                     {post.title}
                   </div>
                   <div className="text-[10px] sm:text-base lg:text-xs">
-                    March 21, 2023
+                    {post.publishedAt}
                   </div>
                 </div>
                 <div className="max-sm:text-sm w-60 truncate ...">
@@ -93,4 +120,4 @@ const ChildBlog = async ({ params }) => {
   );
 };
 
-export default ChildBlog ;
+export default ChildBlog;

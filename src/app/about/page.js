@@ -1,5 +1,3 @@
-
-
 const AboutUs = () => {
   return (
     <main>
@@ -12,7 +10,7 @@ const AboutUs = () => {
             Artificial Intelligence is the Future
           </div>
         </div>
-        <div className="sm:bg-[url('/images/meal-bg.png')] bg-no-repeat pb-16 sm:pb-32 px-4 sm:px-10 lg:px-16">
+        <div className=" pb-16 sm:pb-32 px-4 sm:px-10 lg:px-16">
           <div className="flex ">
             <div className=" bg-[#9FFF9D] relative rounded-t-[24px] sm:rounded-t-[32px] px-4 sm:px-8 lg:px-6 xl:px-8">
               <div className="absolute left-[100%] bottom-0 overflow-hidden before:block before:h-full before:rounded-bl-[40px] w-7 h-7  before:shadow-[0_0_0_40px_#9FFF9D]"></div>
@@ -28,8 +26,8 @@ const AboutUs = () => {
                   <p className="max-lg:pb-12 text-sm sm:text-xl">
                     <span className="font-semibold">
                       Trusted App Maker for 7+ years by 780 hundred thousand
-                      developers. SJS Software is made to allow everybody is
-                      an App owner.
+                      developers. SJS Software is made to allow everybody is an
+                      App owner.
                     </span>
                     Mobile apps are the future that has already reached us. More
                     and more people across the planet choose to use mobile
@@ -89,9 +87,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="sm:px-8 lg:px-10 py-4">
-
-        </div>
+        <div className="sm:px-8 lg:px-10 py-4"></div>
       </div>
     </main>
   );

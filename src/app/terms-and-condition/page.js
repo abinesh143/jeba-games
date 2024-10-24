@@ -10,7 +10,7 @@ const TermsAndCondition = () => {
             Standard Terms of Use and DMCA Notice
           </div>
         </div>
-        <div className="sm:bg-[url('/images/meal-bg.png')] bg-no-repeat pb-16 sm:pb-32 px-4 sm:px-10 lg:px-16">
+        <div className=" pb-16 sm:pb-32 px-4 sm:px-10 lg:px-16">
           <div className="flex ">
             <div className=" bg-[#4F878F] relative rounded-t-[24px] sm:rounded-t-[32px] px-4 sm:px-8 lg:px-6 xl:px-8">
               <div className="absolute left-[100%] bottom-0 overflow-hidden before:block before:h-full before:rounded-bl-[40px] w-7 h-7  before:shadow-[0_0_0_40px_#4F878F]"></div>
@@ -37,11 +37,10 @@ const TermsAndCondition = () => {
                   <h2 className="font-semibold my-4">1. Parties</h2>
                   <p>
                     The parties to these Terms of Use are you, and the owner of
-                    this Free SJS Software.com website business, Free App
-                    Maker Pro AI (“Free SJS Software”). All references to
-                    “we”, “us”, “our”, this “website” or this “site” shall be
-                    construed to mean this website business and Free App Maker
-                    Pro AI.
+                    this Free SJS Software.com website business, Free App Maker
+                    Pro AI (“Free SJS Software”). All references to “we”, “us”,
+                    “our”, this “website” or this “site” shall be construed to
+                    mean this website business and Free App Maker Pro AI.
                   </p>
 
                   <h2 className="font-semibold my-4">2. Modification</h2>
@@ -57,7 +56,9 @@ const TermsAndCondition = () => {
                     ACCEPTANCE OF THE MODIFICATION OR NEW TERMS OF USE.
                   </p>
 
-                  <h2 className="font-semibold my-4">3. Use And Restrictions</h2>
+                  <h2 className="font-semibold my-4">
+                    3. Use And Restrictions
+                  </h2>
                   <p>
                     Subject to your complete and ongoing compliance with these
                     Terms, Free SJS Software grants you limited,
@@ -111,7 +112,9 @@ const TermsAndCondition = () => {
                     site&apos;s home page.
                   </p>
 
-                  <h2 className="font-semibold my-4">6. Limitation of Liability</h2>
+                  <h2 className="font-semibold my-4">
+                    6. Limitation of Liability
+                  </h2>
                   <p>
                     IN NO EVENT SHALL THIS SITE AND/OR ITS LICENSORS BE LIABLE
                     TO ANYONE FOR ANY DIRECT, INDIRECT, PUNITIVE, SPECIAL,
@@ -135,7 +138,9 @@ const TermsAndCondition = () => {
                     without our prior written consent.
                   </p>
 
-                  <h2 className="font-semibold my-4">8. Links to Third Party Websites</h2>
+                  <h2 className="font-semibold my-4">
+                    8. Links to Third Party Websites
+                  </h2>
                   <p>
                     We do not review or control third party websites that link
                     to or from this site, and we are not responsible for their
@@ -145,7 +150,9 @@ const TermsAndCondition = () => {
                     the other sites&apos; terms of use and privacy policy.
                   </p>
 
-                  <h2 className="font-semibold my-4">9. Participation In Promotions of Advertisers</h2>
+                  <h2 className="font-semibold my-4">
+                    9. Participation In Promotions of Advertisers
+                  </h2>
                   <p>
                     You may enter into correspondence with or participate in
                     promotions of advertisers promoting their products, services
@@ -175,8 +182,7 @@ const TermsAndCondition = () => {
             </div>
           </div>
         </div>
-        <div className="sm:px-8 lg:px-10 py-4">
-        </div>
+        <div className="sm:px-8 lg:px-10 py-4"></div>
       </div>
     </main>
   );

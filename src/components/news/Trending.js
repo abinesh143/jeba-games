@@ -1,6 +1,16 @@
 import Image from "next/image";
 import { articles as currentNews } from "../../json/news.json";
 
+export async function generateMetadata({ params }) {
+  const currentMeta = currentNews[0];
+
+  return {
+    title: currentMeta.title || "Smiley News",
+    description: currentMeta.description,
+    keywords: currentMeta.title.split(" ").splice(0, 5),
+  };
+}
+
 const TrendingNews = () => {
   return (
     <main>
@@ -14,10 +24,10 @@ const TrendingNews = () => {
               <a
                 key={`${news.Category}-${news.id}`}
                 href={`/news/${news.id}`}
-                className="relative rounded-[24px] "
+                className={`relative rounded-[24px] ${news.theme === 'dark' ? 'text-white' : 'text-gray-900'}`}
               >
                 <Image
-                  src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+                  src={news.imageUrl}
                   alt={news.title}
                   className="w-full object-cover rounded-[24px] "
                   width={250}
@@ -35,10 +45,10 @@ const TrendingNews = () => {
                 <div className="absolute right-[79px] top-0 overflow-hidden before:block before:h-full before:rounded-tr-[40px] before:shadow-[0_0_0_40px_#FFF] w-7 h-7"></div>
                 <div className="absolute right-0 top-12 overflow-hidden before:block before:h-full before:rounded-tr-[40px] before:shadow-[0_0_0_40px_#FFF] w-7 h-7"></div>
                 <div className="absolute bottom-0 p-6 xl:p-8">
-                  <div className="bg-[#D6C9D4] w-fit px-4 py-1 rounded-3xl text-base sm:text-lg lg:text-base xl:text-lg text-white mb-4">
+                  <div className="bg-[#D6C9D4] w-fit px-4 py-1 rounded-3xl text-base sm:text-lg lg:text-base xl:text-lg mb-4">
                     {news.Category}
                   </div>
-                  <div className="sm:text-xl  font-semibold text-white">
+                  <div className="sm:text-xl  font-semibold">
                     {news.title}
                   </div>
                 </div>

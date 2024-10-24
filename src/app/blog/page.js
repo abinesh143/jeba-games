@@ -1,5 +1,16 @@
 import Image from "next/image";
 import {blog as blogPost}from "../../json/blog.json";
+import metaDescription from '../../app/constant'
+
+export async function generateMetadata({ params}) {
+  const currentMeta = blogPost[0]
+ 
+  return {
+    title: currentMeta.title || 'Smiley News',
+    description: currentMeta.description || metaDescription,
+    keywords: currentMeta.title.split(' ').splice(0,5),
+  }
+}
 
 const MainBlog = () => {
   return (

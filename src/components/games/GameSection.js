@@ -260,7 +260,7 @@ const GameSection = (props) => {
                     <div className="pt-2 font-bolder text-center rounded-b">
                       {g.name.en}
                     </div>
-                    <Link href={`/games/${g.code}`}>
+                    <Link href={g.url}>
                       <img
                         src={g.assets.cover}
                         className="p-2 rounded-xl"
