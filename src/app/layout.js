@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,6 +29,15 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="container mx-auto p-4">{children}</main>
         <Footer />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-7CMSE401KZ"
+        />
+        <Script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-7CMSE401KZ');
+        </Script>
       </body>
     </html>
   );
