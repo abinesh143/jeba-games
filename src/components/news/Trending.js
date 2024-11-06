@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { articles as currentNews } from "../../json/news.json";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const currentMeta = currentNews[0];
@@ -21,9 +22,9 @@ const TrendingNews = () => {
         <div className="mt-10 sm:mt-16 md:mt-20 pb-10 sm:pb-20 xl:pb-40">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {currentNews.map((news, index) => (
-              <a
+              <Link
                 key={`${news.Category}-${news.id}`}
-                href={`/news/${news.id}`}
+                href={`/news/${news.slug}`}
                 className={`relative rounded-[24px] ${news.theme === 'dark' ? 'text-white' : 'text-gray-900'}`}
               >
                 <Image
@@ -48,11 +49,11 @@ const TrendingNews = () => {
                   <div className="bg-[#D6C9D4] w-fit px-4 py-1 rounded-3xl text-base sm:text-lg lg:text-base xl:text-lg mb-4">
                     {news.Category}
                   </div>
-                  <div className="sm:text-xl  font-semibold">
+                  <div className="sm:text-xl  font-semibold bg-black bg-opacity-50 p-3 rounded-lg">
                     {news.title}
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

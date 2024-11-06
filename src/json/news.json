@@ -2,14 +2,62 @@
   "articles": [
     {
       "id": 1,
+      "slug": "qs-stock-q3-2024-earnings-highlights",
       "title": "QS Stock: QuantumScape Corp (QS) Q3 2024 Earnings Call Highlights - Strategic Milestones and Financial Insights",
       "Category": "Global",
       "description": "QuantumScape Corp's Q3 2024 earnings reveal a focus on low-volume QSE-5 prototype production, with capital expenditures of $17.9 million. Despite a GAAP net loss of $119.7 million and adjusted EBITDA loss of $71.6 million, the company continues to advance its development milestones, supported by a strategic partnership with PowerCo.",
       "url": "",
       "imageUrl": "/temp/news-1.webp",
-      "theme": "light",
+      "theme": "dark",
       "publishedAt": "24 Oct 2024",
-      "content": "QuantumScape Corp (NYSE: QS) reported its Q3 2024 financial results, with capital expenditures of $17.9 million, primarily for equipment related to low-volume QSE-5 prototype production. GAAP operating expenses reached $130.2 million, resulting in a net loss of $119.7 million. Adjusted EBITDA loss stood at $71.6 million, aligning with expectations. The company adjusted its full-year EBITDA loss guidance to $280 million to $300 million, while capital expenditures guidance was reduced to $60 million to $75 million. Ending Q3 with $841 million in liquidity, QuantumScape remains focused on advancing production and maintaining its strategic partnership with PowerCo."
+      "content": "QuantumScape Corp (NYSE: QS) reported its Q3 2024 financial results, with capital expenditures of $17.9 million, primarily for equipment related to low-volume QSE-5 prototype production. GAAP operating expenses reached $130.2 million, resulting in a net loss of $119.7 million. Adjusted EBITDA loss stood at $71.6 million, aligning with expectations. The company adjusted its full-year EBITDA loss guidance to $280 million to $300 million, while capital expenditures guidance was reduced to $60 million to $75 million. Ending Q3 with $841 million in liquidity, QuantumScape remains focused on advancing production and maintaining its strategic partnership with PowerCo.",
+      "moreContent": []
+    },
+    {
+      "id": 2,
+      "slug": "us-election-results-2024",
+      "title": "2024 U.S. Election Results: A Detailed Breakdown of the Popular Vote, Electoral College, and Key State Outcomes",
+      "Category": "Global",
+      "description": "Dive into the pivotal moments and results of the 2024 United States presidential election. This comprehensive analysis covers the popular vote statistics, state-by-state electoral outcomes, and how battleground states like Georgia, Arizona, and North Carolina influenced the final tally. Discover who won the presidency, the latest updates from House and Senate races, and reactions from the candidates, including Trump’s victory speech and Kamala Harris's concession. Track the journey to the 47th presidency with insights from leading sources like Fox News, ABC, and CNN, along with a look back at 2020’s popular vote comparison.",
+      "url": "",
+      "imageUrl": "/temp/news-2.webp",
+      "theme": "dark",
+      "publishedAt": "06 Nov 2024",
+      "content": "As we approach the final stretch of the 2024 US presidential race, questions loom about who will emerge victorious. With Donald Trump and Kamala Harris battling for the highest office in the land, the political landscape is shifting daily. As election updates roll in, many are wondering: Who is winning the 2024 election right now? Is Kamala Harris still a strong contender, or has Trump's lead solidified as we near election day?",
+      "moreContent": [
+        {
+          "title": "Presidential Update: Election Results So Far",
+          "description": [
+            "The live presidential election results have been coming in fast and furious. So far, several key battleground states like Pennsylvania, Georgia, and North Carolina are still in play, with election results fluctuating throughout the day. The 2024 electoral college map is constantly updated as votes are counted across the country. Who won Pennsylvania 2024 presidential election? Is Trump leading in these pivotal states, or can Harris close the gap?",
+            "Election results projections continue to change, with recent polls today live showing close margins. In the 2020 presidential election, Trump won the popular vote in several key swing states, and it's unclear whether Harris can change the tide this time around. Voter turnout is crucial in these elections—who is predicted to win the 2024 election depends largely on how voters respond to issues like inflation, healthcare, and foreign policy."
+          ]
+        },
+        {
+          "title": "Can Kamala Win at This Point?",
+          "description": [
+            "Kamala Harris's chances in the 2024 presidential election appear to be shrinking. While she was able to secure a significant portion of the popular vote in 2020, the challenge this time is steeper. Trump and Harris polls show Trump leading in many critical states, especially in the swing states. Some experts even question: Is Kamala Harris conceding the election too soon? Harris's popularity appears to be waning, but with new polling data and voter behavior shifting, it's still anyone's race."
+          ]
+        },
+        {
+          "title": "What Was the Popular Vote in 2020?",
+          "description": [
+            "In 2020, Trump lost the popular vote to Joe Biden but still managed to win several key states. The electoral vs popular vote situation is shaping up to be a focal point again in 2024. As voters head to the polls, many are asking: How many votes did Trump get? or Who won the popular vote in the 2024 presidential election? The tension between the electoral college and popular vote continues to drive conversation as voters prepare for another tight race."
+          ]
+        },
+        {
+          "title": "Election Results Today: Live Poll Count and Updates",
+          "description": [
+            "Live election poll results are updating in real-time, and every vote counts. As the election results so far today pour in, many are asking: Who is the president elect for 2025? While Fox News live and CNN continue to provide unbiased election coverage, experts are eyeing crucial swing states to determine who will claim the White House in 2024."
+          ]
+        },
+        {
+          "title": "The Winner of the 2024 Election: Who Will It Be?",
+          "description": [
+            "So, who is winning the 2024 election right now? The answer is still unclear. As election results continue to pour in, many wonder if the Trump victory speech 2024 will be announced early in the night or if Kamala Harris will claim a surprising win. Election day has seen dramatic shifts in voting patterns, and it will likely come down to final vote counts and electoral votes in key battleground states.",
+            "For now, the world waits as the 2024 US election results live continue to unfold. Will we see Trump return to power as the 47th president or will Kamala Harris break barriers and make history as the first female president? Only time will tell, and with daily wire election updates and live coverage, the nation is on the edge of its seat waiting for the final call. Stay tuned as the election results final approach, and remember to keep an eye on key states like North Carolina, Georgia, and Pennsylvania—where every vote could decide the future of America."
+          ]
+        }
+      ]
     }
   ]
 }

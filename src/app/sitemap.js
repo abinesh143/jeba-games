@@ -48,5 +48,17 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 0.5,
     },
+    {
+      url: "https://www.jebaselvin.com/news/qs-stock-q3-2024-earnings-highlights",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.jebaselvin.com/news/us-election-results-2024",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 }

@@ -4,7 +4,7 @@ import metaDescription from "../../../app/constant";
 
 export async function generateMetadata({ params }) {
   const id = (await params).slug;
-  const currentMeta = currentNews[id - 1];
+  const currentMeta = currentNews.find((n) => n.slug === id);
 
   return {
     title: currentMeta.title || "Smiley News",
@@ -14,8 +14,8 @@ export async function generateMetadata({ params }) {
 }
 
 const ChildTrendingNews = async ({ params }) => {
-  const articleId = await params;
-  const article = currentNews[articleId.slug - 1];
+  const articleId = (await params).slug;
+  const article = currentNews.find((n) => n.slug === articleId);
   const relatedArticle = currentNews.filter((n) => n.id < 5);
 
   const formatTitle = (text, isSplit) => {
@@ -64,6 +64,14 @@ const ChildTrendingNews = async ({ params }) => {
           <div className="text-sm sm:text-2xl xl:text-3xl font-normal mt-10 sm:mt-24">
             <p className="mb-3 sm:mb-6">{article?.content}</p>
           </div>
+          {article.moreContent.map((content) => (
+            <div className="text-sm sm:text-2xl xl:text-3xl font-normal mt-10 sm:mt-24">
+              <h4 className="text-xl sm:text-4xl font-semibold mb-2">{content.title}</h4>
+              {content.description.map((d, n) => (
+                <p key={`${articleId}-${n}`} className="mb-3 sm:mb-6">{d}</p>
+              ))}
+            </div>
+          ))}
         </div>
         <div className="basis-1/3">
           <div className="flex">
