@@ -49,13 +49,31 @@ export default function sitemap() {
       priority: 0.5,
     },
     {
-      url: "https://www.jebaselvin.com/news/qs-stock-q3-2024-earnings-highlights",
+      url: "https://www.jebaselvin.com/blog/turn-shopify-store-into-mobile-app-2025-free",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: "https://www.jebaselvin.com/news/us-election-results-2024",
+      url: "https://www.jebaselvin.com/blog/convert-wix-website-to-mobile-app-2025-free",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.jebaselvin.com/blog/top-sites-to-create-a-game-without-coding-and-earn-money",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.jebaselvin.com/blog/top-10-games-that-pay-real-money-2025",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.jebaselvin.com/news/will-bitcoin-hit-1-crore-inr-in-2025",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,

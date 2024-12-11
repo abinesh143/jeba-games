@@ -1,34 +1,36 @@
 import Image from "next/image";
-import {blog as blogPost}from "../../json/blog.json";
-import metaDescription from '../../app/constant'
+import { blog as blogPost } from "../../json/blog.json";
+import metaDescription from "../../app/constant";
 
-export async function generateMetadata({ params}) {
-  const currentMeta = blogPost[0]
- 
+export async function generateMetadata({ params }) {
+  const currentMeta = blogPost[0];
+
   return {
-    title: currentMeta.title || 'Smiley News',
+    title: currentMeta.title || "Jeba Blogs",
     description: currentMeta.description || metaDescription,
-    keywords: currentMeta.title.split(' ').splice(0,5),
-  }
+    keywords: currentMeta.title.split(" ").splice(0, 5),
+  };
 }
 
 const MainBlog = () => {
   return (
     <main>
       <div>
-        <h2 className="text-xl sm:text-3xl lg:text-5xl text-center font-semibold mt-10 sm:mt-14 lg:mt-20">
+        <h1 className="text-xl sm:text-3xl lg:text-5xl text-center font-semibold mt-10 sm:mt-14 lg:mt-20">
           Top Trending Post
-        </h2>
+        </h1>
         <div className="mt-10 sm:mt-16 md:mt-20 pb-10 sm:pb-20 xl:pb-40">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPost.map((blog, index) => (
+            {blogPost?.map((blog, index) => (
               <a
                 key={`${blog.Category}-${blog.id}`}
-                href={`/blog/${blog.id}`}
-                className="relative rounded-[24px] "
+                href={`/blog/${blog.slug}`}
+                className={`relative rounded-[24px] ${
+                  blog.theme === "dark" ? "text-white" : "text-gray-900"
+                }`}
               >
                 <Image
-                  src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+                  src={blog.imageUrl}
                   alt={blog.title}
                   className="w-full object-cover rounded-[24px] "
                   width={250}
@@ -49,7 +51,7 @@ const MainBlog = () => {
                   <div className="bg-[#D6C9D4] w-fit px-4 py-1 rounded-3xl text-base sm:text-lg lg:text-base xl:text-lg text-white mb-4">
                     {blog.Category}
                   </div>
-                  <div className="sm:text-xl  font-semibold text-white">
+                  <div className="sm:text-xl  font-semibold bg-black bg-opacity-50 p-3 rounded-lg">
                     {blog.title}
                   </div>
                 </div>

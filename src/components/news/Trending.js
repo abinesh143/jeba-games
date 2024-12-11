@@ -6,7 +6,7 @@ export async function generateMetadata({ params }) {
   const currentMeta = currentNews[0];
 
   return {
-    title: currentMeta.title || "Smiley News",
+    title: currentMeta.title || "Jeba Blogs",
     description: currentMeta.description,
     keywords: currentMeta.title.split(" ").splice(0, 5),
   };
@@ -25,7 +25,9 @@ const TrendingNews = () => {
               <Link
                 key={`${news.Category}-${news.id}`}
                 href={`/news/${news.slug}`}
-                className={`relative rounded-[24px] ${news.theme === 'dark' ? 'text-white' : 'text-gray-900'}`}
+                className={`relative rounded-[24px] ${
+                  news.theme === "dark" ? "text-white" : "text-gray-900"
+                }`}
               >
                 <Image
                   src={news.imageUrl}

@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { articles as currentNews } from "../../../json/news.json";
 import metaDescription from "../../../app/constant";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const id = (await params).slug;
   const currentMeta = currentNews.find((n) => n.slug === id);
 
   return {
-    title: currentMeta.title || "Smiley News",
+    title: currentMeta.title || "Jeba Blogs",
     description: currentMeta.description || metaDescription,
     keywords: currentMeta.title.split(" ").splice(0, 5),
   };
@@ -18,13 +19,13 @@ const ChildTrendingNews = async ({ params }) => {
   const article = currentNews.find((n) => n.slug === articleId);
   const relatedArticle = currentNews.filter((n) => n.id < 5);
 
-  const formatTitle = (text, isSplit) => {
+  const formatTitle = (text, isSplit, shortTitle) => {
     const title = text.split(" ");
     if (title.length === 0) {
       return "";
     }
     if (isSplit) {
-      return title.splice(1, 4);
+      return title.splice(1, 7).join(" ");
     } else {
       return title[0];
     }
@@ -34,9 +35,9 @@ const ChildTrendingNews = async ({ params }) => {
     <div className=" bg-top bg-no-repeat sm:pb-10 lg:pb-20 mt-10 lg:mt-20">
       <div className="flex gap-8">
         <div className="lg:basis-2/3">
-          <h2 className="text-2xl sm:text-5xl xl:text-6xl mb-4">
+          <h1 className="text-2xl sm:text-5xl xl:text-6xl mb-4">
             {article?.title}
-          </h2>
+          </h1>
           <p className="text-lg sm:text-2xl xl:text-3xl font-normal">
             {article?.publishedAt} - {article?.Category}
           </p>
@@ -46,7 +47,7 @@ const ChildTrendingNews = async ({ params }) => {
         <div className="basis-2/3">
           <div className="rounded-[24px] relative">
             <Image
-              src={article.imageUrl}
+              src={article?.imageUrl}
               alt={article?.title || "blog"}
               className="w-full object-cover rounded-[24px] "
               width={250}
@@ -54,22 +55,47 @@ const ChildTrendingNews = async ({ params }) => {
             />
             <div className="absolute -bottom-8 sm:-bottom-12 xl:-bottom-[60px] font-semibold text-2xl sm:text-5xl xl:text-6xl">
               <div className="bg-white relative w-1/2 pt-3 rounded-tr-[24px] sm:rounded-tr-[40px]">
-                <span>{formatTitle(article?.title, false)}</span>
+                <span>{formatTitle(article?.shortTitle, false)}</span>
                 <div className="absolute left-[100%] bottom-0 overflow-hidden before:block before:h-full before:rounded-bl-[40px] before:shadow-[0_0_0_40px_white] w-7 h-7 xl:w-12 xl:h-12"></div>
                 <div className="absolute left-[0%] -top-7 sm:-top-12 overflow-hidden before:block before:h-full before:rounded-bl-[40px] before:shadow-[0_0_0_40px_white] w-7 h-7 sm:w-12 sm:h-12"></div>
               </div>
-              <div>{formatTitle(article?.title, true)}</div>
+              <div>{formatTitle(article?.shortTitle, true)}</div>
             </div>
           </div>
           <div className="text-sm sm:text-2xl xl:text-3xl font-normal mt-10 sm:mt-24">
             <p className="mb-3 sm:mb-6">{article?.content}</p>
           </div>
-          {article.moreContent.map((content) => (
-            <div className="text-sm sm:text-2xl xl:text-3xl font-normal mt-10 sm:mt-24">
-              <h4 className="text-xl sm:text-4xl font-semibold mb-2">{content.title}</h4>
+          <div className="flex justify-center">
+            <Link
+              href={article.button?.url}
+              target="_blank"
+              type="button"
+              className={`focus:outline-none text-white focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-purple-700 hover:bg-purple-800 focus:ring-purple-300`}
+            >
+              {article.button.text || "Visit Website"}
+            </Link>
+          </div>
+          {article.moreContent.map((content, index) => (
+            <div
+              key={`article-${index}`}
+              className="text-sm sm:text-2xl xl:text-3xl font-normal mt-10 sm:mt-20"
+            >
+              <h4 className="text-xl sm:text-4xl font-semibold mb-2">
+                {content.title}
+              </h4>
               {content.description.map((d, n) => (
-                <p key={`${articleId}-${n}`} className="mb-3 sm:mb-6">{d}</p>
+                <p key={`${articleId}-${n}`} className="mb-3 sm:mb-6">
+                  {d}
+                </p>
               ))}
+              {content.link && (
+                <Link href={content.link} target="_blank">
+                  Website Link :{" "}
+                  <span className="text-blue-500 hover:text-blue-800 underline">
+                    Click Here
+                  </span>
+                </Link>
+              )}
             </div>
           ))}
         </div>
@@ -84,17 +110,17 @@ const ChildTrendingNews = async ({ params }) => {
           </div>
           <div className="bg-[#F4F4F4] rounded-b-[24px] rounded-tr-[24px] sm:rounded-b-[32px] sm:rounded-tr-[32px] p-3 sm:p-10 lg:p-5 xl:p-7 mb-8">
             {relatedArticle.map((news) => (
-              <div key={`relatedArticle-${news.id}`} className="mb-8">
+              <div key={`relatedArticle-${news?.slug}`} className="mb-8">
                 <div className="relative mb-4">
                   <Image
-                    src={news.imageUrl}
+                    src={news?.imageUrl}
                     alt="blogs"
                     className="w-full object-cover rounded-[24px] "
                     width={250}
                     height={250}
                   />
                   <a
-                    href={`/news/${news.id}`}
+                    href={`/news/${news?.slug}`}
                     className="absolute flex justify-center items-center bg-[#F4F4F4] top-0 right-0 rounded-bl-[24px] w-14 h-12"
                   >
                     <Image
@@ -110,14 +136,14 @@ const ChildTrendingNews = async ({ params }) => {
                 </div>
                 <div className="flex justify-between">
                   <div className="text-lg sm:text-2xl lg:text-lg xl:text-xl font-semibold">
-                    {news.title}
+                    {news?.title}
                   </div>
                   <div className="text-[10px] sm:text-base lg:text-xs">
-                    {news.publishedAt}
+                    {news?.publishedAt}
                   </div>
                 </div>
                 <div className="max-sm:text-sm w-60 truncate ...">
-                  {news.description}
+                  {news?.description}
                 </div>
               </div>
             ))}

@@ -2,23 +2,16 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 border-gray-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
-        <a
-          href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
-          <img
-            src="/gif/emogi1.webp"
-            className="h-8"
-            alt="Flowbite Logo"
-          />
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/gif/emogi1.webp" className="h-8" alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-            Smiley News
+            Jeba Blogs
           </span>
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <a
-          href="https://play.google.com/store/apps/details?id=funny.cricket.animated.sticker"
-          target="_blank"
+            href="https://play.google.com/store/apps/details?id=funny.cricket.animated.sticker"
+            target="_blank"
             type="button"
             className="text-white bg-yellow-300 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
